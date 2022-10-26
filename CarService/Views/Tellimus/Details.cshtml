@@ -1,0 +1,48 @@
+﻿@model Tellimus
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Tellimus</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tootaja)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tootaja.TootajaID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Autoteenus)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Autoteenus.AutoteenusID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Klient)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Klient.KlientID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Kuupaev)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Kuupaev)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Aeg)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Aeg)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.TellimusID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
